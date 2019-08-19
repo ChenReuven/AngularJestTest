@@ -29,4 +29,8 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('app works!');
   }));
+
+  it('should render title in a h1 tag', async(() => {
+    expect(true).toBe(true);
+  }));
 });

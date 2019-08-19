@@ -5,22 +5,32 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "build": "ng build --progress=false --aot",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "./src/setupJest.ts"
   },
   "private": true,
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.2.5",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/platform-server": "^4.2.5",
     "@angular/router": "^4.0.0",
+    "@types/jest": "^20.0.2",
     "core-js": "^2.4.1",
+    "jest": "^20.0.4",
+    "jest-preset-angular": "^2.0.4",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
